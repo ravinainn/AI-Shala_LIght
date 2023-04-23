@@ -1,13 +1,3 @@
-/* color
-  #13c7e6
-  #01265B
-*/
-
-
-
-
-
-
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;500;600;800;900&family=Roboto:wght@400&display=swap');
 
 
@@ -128,12 +118,13 @@
 }
 
 .mobile_nav_btn {
+  margin-right: 1vw;
   display: none;
   background: transparent;
   cursor: pointer;
 }
 .mobile_nav_icon {
-  color: #000;
+  color: #fff;
   width: 5vw;
   height: 5vw;
 }
@@ -746,14 +737,10 @@ ol li .descr { font-size: 0.8rem; font-weight: 300 }
   background-attachment: fixed; */
   width: 100vw;
   padding: 2rem 0rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  
 }
 
 .courses h1 {
+  text-align: center;
   color: #000;
   font-size: 4rem;
   font-weight: 600;
@@ -761,20 +748,21 @@ ol li .descr { font-size: 0.8rem; font-weight: 300 }
 }
 
 .courses_content {
-
+padding: 1vw;
   width: 100vw;
   display: flex;
   align-items: center;
-  
-
+  justify-content: space-between;
+  /* position: relative; */
 }
 
 
 .courses_list {
+  /* position:absolute; */
   border-radius: 25px;
   /* border: 1px solid tomato; */
   list-style: none;
-  margin-left: 1.5rem;
+  /* margin-left: 1.5rem; */
   padding: .5rem;
   width: 23vw;
   background-color: #01265B;
@@ -782,10 +770,11 @@ ol li .descr { font-size: 0.8rem; font-weight: 300 }
 
 .courses_list li {
   border-radius: 25px;
-  font-weight: 300;
+  font-weight: 500;
   font-size: 1.2vw;
+
   padding: 1rem;
-  color: white;
+  color: #fff;
   border-bottom: 1px  tomato;
   cursor: pointer;
   transition: background-color 0.3s ease;
@@ -803,9 +792,9 @@ ol li .descr { font-size: 0.8rem; font-weight: 300 }
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 20px;
-  padding: 4rem 1rem;
-  color: white;
+  margin: 2vw;
+  padding: 4vw 1vw;
+  color: #f9f9f9;
   /* border: 2px solid tomato; */
   border-radius: 25px;
 }
@@ -814,9 +803,9 @@ ol li .descr { font-size: 0.8rem; font-weight: 300 }
 
 .description h2 {
 
-  font: white;
+  color: #13c7e6;
   text-align: center;
-  color: tomato;
+  /* color: tomato; */
   font-size: 2.4vw;
   font-weight: 600;
 }
@@ -830,7 +819,7 @@ ol li .descr { font-size: 0.8rem; font-weight: 300 }
 }
 
 .description h3 {
-  color: tomato;
+  color: #13c7e6;
   padding-left: 1.5rem;
   font-size:1.5vw ;
   font-weight: 600;
@@ -845,22 +834,75 @@ ol li .descr { font-size: 0.8rem; font-weight: 300 }
 
 .description a {
   text-align: end;
-  padding-right: 3.6rem;
+  padding-right: 4vw;
 
 }
 
 .description a button {
   border: none;
-  padding: 1rem;
-  border-radius: 10px;
-  font-size: 1rem;
-  font-weight: 500;
-  background-color: tomato;
+  padding: 1rem 2rem;
+  border-radius: 60px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  background-color: #13c7e6;
 }
 
 .description button:hover {
-  background-color: #ff2c06;
+  background-color: #B9E9FC;
 }
+
+.course_soon {
+  text-align: center;
+}
+.course_soon button {
+  border: none;
+  /* border: 5px solid #13c7e6; */
+  border-radius: 60px;
+  background-color: #13c7e6;
+  padding: .8rem 2.4rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #01265B;
+  /* box-shadow: 20px 20px 20px 0px RGBA(19, 199, 230, .5); */
+  transition: background-color .3s ;
+}
+.course_soon button:hover {
+  background-color: #B9E9FC;
+}
+@media(max-width: 720px){
+  .courses_content{
+    flex-direction: column;
+  }
+  .courses_list{
+    width: auto;
+  }
+  .courses_list li {
+    font-size: .7rem;
+  }
+
+  .description{
+    
+    width: 90vw;
+    height: auto;
+  }
+  .description h2{
+    font-size: 1rem;
+  }
+  .description p{
+    font-size: .5rem;
+    
+    line-height: 1.2;
+  }
+  .description h3 {
+    
+    font-size: .7rem;
+  }
+  .course_benefits{
+    font-size: .5rem;
+  }
+  
+}
+
 
 /* .four{
 
@@ -1163,13 +1205,13 @@ figure:hover img {
 
 
 .footer {
-  background-color: #FEFBF6;
+  background-color: #01265B;
   width: 100%;
   overflow: hidden;
   /* height: 400px; */
   display: flex;
   justify-content: space-evenly;
-  
+  flex-wrap: wrap;
   align-items: center;
 
 
@@ -1185,10 +1227,21 @@ figure:hover img {
 }
 
 .ai p {
+  color: #fff;
   font-weight: 400;
-  font-size:1vw;
+  font-size: .8rem;
   padding: 12%;
   text-align: left;
+}
+.footer_follow h3{
+  font-size: 1.2rem;
+  margin: .5rem 0;
+}
+.follow_links{
+  display: flex;
+  margin-left: .1rem;
+  gap: 1rem;
+  /* justify-content: space-between; */
 }
 
 .quick {
@@ -1198,22 +1251,23 @@ figure:hover img {
 
 
 .quick ul {
+  color: #fff;
   list-style-type: none;
   padding-top: 4%;
 }
 
 .quick ul li a {
   text-decoration: none;
-  color: black;
+  color: #fff;
   /* font-weight: 400; */
-  font-size: 1vw;
+  font-size: .8rem;
 
 }
 
 .footer h3 {
-  font-size: 1.6vw;
-  color: tomato;
-  font-weight: 400;
+  font-size: 1.4rem;
+  color: #13c7e6;
+  font-weight: 500;
 }
 
 
@@ -1233,8 +1287,9 @@ figure:hover img {
 }
 
 .project_flexitem h5 {
+  color: #fff;
   font-weight: 400;
-  font-size: 1vw;
+  font-size: .8rem;
   padding-left: 4%;
 }
 
@@ -1251,13 +1306,17 @@ figure:hover img {
 
 .contact_item {
   display: flex;
-  padding: 1% 0;
+  padding: .6rem 0;
 
 }
-
+.contact_item i {
+  margin-right: 1rem;
+}
 .contact_item h5 {
+  
   font-weight: 400;
-  font-size: 1vw;
+  font-size: .8rem;
+  color: #fff;
 }
 
 
