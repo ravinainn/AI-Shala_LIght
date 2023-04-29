@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;500;600;800;900&family=Roboto:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@400&display=swap');
 
 
 * {
@@ -82,7 +82,9 @@
 .sub_menu{
   
   display: none;
+  /* transition: display 3s; */
 }
+
 
 .nav_project:hover .sub_menu{
   border-radius: 10px;
@@ -118,7 +120,7 @@
 }
 
 .mobile_nav_btn {
-  margin-right: 1vw;
+  margin-right: 5vw;
   display: none;
   background: transparent;
   cursor: pointer;
@@ -137,7 +139,13 @@
           RESPONSIVE NAV BAR CODE
 
 ========================================= */
-
+@media (max-width:580px){
+  .logo {
+    width: 24vw;
+    margin: 1vw;
+    margin-left: 5vw;
+  }
+}
 @media(max-width:780px){
   .mobile_nav_btn{
     display: block;
@@ -149,8 +157,9 @@
   .nav{
     /* display: none; */
     z-index: 3;
-    width: 100%;
-    padding:3rem 0;
+    width: 100vw;
+    /* height: 50vh; */
+    padding: 10vh;
     background-color: #01265B;
     position:absolute;
     
@@ -159,19 +168,24 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content:cente;
 
     transform: translateX(100%);
     transition: all 0.5s linear;
 
-    opacity: 0;
+    opacity:1;
     visibility: hidden;
     pointer-events: none;
     
   }
   .nav li a{
     border: none;
+    
   }
+  li.nav{
+    position: relative;
+  }
+  
   .active .nav{
     transform: translateX(0);
     opacity: 1;
@@ -184,8 +198,13 @@
   .active .mobile_nav_btn .mobile_nav_icon[name="menu-outline"]{
     display: none;
   }
-  .sub_menu:hover {
-    margin: 0;
+  .sub_menu {
+    position: absolute;
+    top: 12vh;
+    left:65vw; 
+  }
+  .sub_menu ul li a{
+    border: none;
   }
 }
 
@@ -261,11 +280,53 @@
   text-align: center;
 }
 
-/* @media(max-width:780px){
+@media(max-width:480px){
   .brain{
-    
+    display: none;
   }
-} */
+  .text {
+  width: 80vw;
+  font-weight: 300;
+  font-size: 1rem;
+  color: #000;
+  z-index: 2;
+  }
+  .text span {
+  color: #01265B;
+  font-weight: 800;
+  font-size: 2rem;
+  }
+  .cont_members{
+    /* background-color: blue; */
+    max-width: 80vw ;
+  }
+  .icon{
+    /* background-color:orange; */
+    width: 20vw;
+  }
+  .icon img {
+  width: 12vw;
+
+  }
+
+  .counter {
+  /* color: #01265B;
+  padding: 5px; */
+  font-size: 3vw;
+
+  /* text-align: center; */
+  }
+
+  .icon_text {
+  font-weight: 600;
+  /* color: #000; */
+  font-size: 2.2vw;
+  /* text-align: center; */
+  }  
+  
+}
+
+
 
 
 
@@ -279,10 +340,11 @@
 
 .container_partners {
 	padding: 5vh 0;
-  min-height:50vh ;
+  /* min-height:50vh ; */
   align-items: center;
 	background: #01265B;
 	display: flex;
+  gap: 5vh;
   justify-content: space-between;
 	flex-direction: column;
 }
@@ -290,6 +352,7 @@
   color: white;
   font-size: 5rem;
   font-weight: 500;
+  
 }
 
 .slider {
@@ -299,7 +362,7 @@
 	overflow: hidden;
 	position: relative;
 	width: 72vw;
-  border-radius: 20px;
+  border-radius: 18px;
 
   
 }
@@ -355,16 +418,26 @@
     font-size: 3rem;
   }
   .slide img {
-    height: 50px;
+    height: 10vw;
   }
 
   .slider{
-    width: 80vw;
+    width: 90vw;
   }
   .slider .slide-track {
     
-    --slide_img_width: 150px;
+    --slide_img_width: 200px;
   }
+@media(max-width:580px){
+  .partners_text{
+    font-size: 8vw;
+    font-weight: 800;
+  }
+  .slider .slide-track {
+    
+    --slide_img_width: 110px;
+  }
+}
 
   /* neeche wale ko add krne ke baad animation slow hori hai  */
   /* @keyframes scroll {
@@ -379,7 +452,13 @@
             SUPER 10
             
 ========================================*/
-
+.super_10 h1{
+  
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 500;
+  padding-top: 4vh;
+}
 
 .super-10_container {
   /* background-image: url(./Images/Background/stars.jpg);
@@ -396,7 +475,7 @@
   /* background-color: bisque; */
   display: flex;
   align-items: center;
-  gap: 1rem;
+  /* gap: 1rem; */
   /* color: #01265B; */
 
   border-radius: 30px;
@@ -457,7 +536,7 @@
 .sec_text {
   /* background-color: #13c7e6; */
   width: 70vw;
-  padding: 5%;
+  padding: 2vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -490,23 +569,39 @@
   line-height: 1.2rem; */
 }
 @media(max-width:780px){
-  .sec_text h1{
-    font-size: 3rem;
-    font-size: 2rem;
-  }
   .sec_text h2{
     font-size: 2rem;
   }
 }
-@media(max-width:720px){
+/* @media(max-width:720px){
   .sec_text h1{
     font-size: 2rem;
     
   }
   .sec_text h2{
-    font-size: 1rem;
+    font-size: 2rem;
+  }
+  
+} */
+@media(max-width:560px){
+  .super_10 h1{
+    font-size: 8vw;
+    font-weight: 700;
+  }
+  .second_img{
+    display:none;
+  }
+  .sec_text{
+    width:auto;
+  }
+  .sec_text h2{
+    font-size: 6vw;
+  }
+  .sec_text p{
+    font-size: 4vw;
   }
 }
+
 
 
 
@@ -525,7 +620,7 @@
   background-attachment: fixed;
   color:#f2f2f2; */
   
-  padding-bottom: 10rem;
+  padding-bottom: 2rem;
 }
 .features h2 {
   text-align: center;
@@ -582,6 +677,19 @@
   font-weight: 500;
   font-size: .8rem;
   padding-bottom: .5rem ;
+}
+
+@media (max-width:560px){
+  .features h2{
+    font-size: 8vw;
+    font-weight: 700;
+  }
+  .features_card img{
+    display: none;
+  }
+  .features_card{
+    height: auto;
+  }
 }
  
 /* @import url("https://pro.fontawesome.com/releases/v6.0.0-beta1/css/all.css");
@@ -741,14 +849,15 @@ ol li .descr { font-size: 0.8rem; font-weight: 300 }
 
 .courses h1 {
   text-align: center;
+  
   color: #000;
   font-size: 4rem;
   font-weight: 600;
-  margin-bottom: 3rem;
+  /* margin-bottom: 3rem; */
 }
 
 .courses_content {
-padding: 1vw;
+  padding: 1vw;
   width: 100vw;
   display: flex;
   align-items: center;
@@ -811,10 +920,15 @@ padding: 1vw;
 }
 
 .description p {
+  /* font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.58;
+  letter-spacing: .1vw; */
+  
   padding: 1.5rem;
   letter-spacing: 1px;
   line-height: 1.5;
-  font-weight: 400;
+  font-weight: 600;
   font-size: 1.2vw;
 }
 
@@ -840,7 +954,7 @@ padding: 1vw;
 
 .description a button {
   border: none;
-  padding: 1rem 2rem;
+  padding: 1vw 2vw;
   border-radius: 60px;
   font-size: 1.2rem;
   font-weight: 600;
@@ -849,6 +963,7 @@ padding: 1vw;
 
 .description button:hover {
   background-color: #B9E9FC;
+  cursor: pointer;
 }
 
 .course_soon {
@@ -878,11 +993,12 @@ padding: 1vw;
   }
   .courses_list li {
     font-size: .7rem;
+    padding: 1vh .5vw;
   }
 
   .description{
     
-    width: 90vw;
+    min-width: 90vw;
     height: auto;
   }
   .description h2{
@@ -899,6 +1015,25 @@ padding: 1vw;
   }
   .course_benefits{
     font-size: .5rem;
+  }
+  
+}
+@media(max-width:580px){
+  .courses h1{
+    margin-bottom: 1rem;
+    font-size: 9vw;
+    font-weight: 700;
+  }
+  .description a button {
+    font-size: 3vw;
+  }
+  .description p{
+    font-weight: 500;
+    font-size: 3vw;
+  }
+  .course_benefits{
+    font-weight: 500;
+    font-size: 3vw;
   }
   
 }
