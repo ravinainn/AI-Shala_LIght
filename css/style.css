@@ -161,7 +161,7 @@
     display: block;
     z-index: 5;
     
-
+    
 
   }
   .nav{
@@ -757,6 +757,20 @@
   font-size: 1.2vw;
 }
 
+.description .sec_link a{
+  
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    padding-bottom: 30px;
+    line-height: 1.58;
+    letter-spacing: .1vw;
+    color: #fff;
+    transition: color .3s;
+}
+.description .sec_link a:hover{
+  color: #13c7e6;
+}
 .description a {
   text-align: end;
   padding-right: 4vw;
@@ -824,6 +838,9 @@
     
     line-height: 1.2;
   }
+  .description .sec_link a{
+    font-size: .5rem;
+  }
   .description h3 {
     
     font-size: .7rem;
@@ -844,6 +861,9 @@
   }
   .description p{
     font-weight: 500;
+    font-size: 3vw;
+  }
+  .description .sec_link a{
     font-size: 3vw;
   }
   .course_benefits{
@@ -1667,14 +1687,14 @@ figure:hover img {
 
     .testi_slider{
       height:230px;
-      width: 300px;
+      width: 320px;
       margin: auto;
     }
     .testi_slider li {
-      width: 300px;
+      width: 320px;
     }
     .testi_content {
-      width: 300px;
+      width: 320px;
     }
     @keyframes slide-animation {
       0% {opacity: 0;}
@@ -1693,12 +1713,12 @@ figure:hover img {
       }
       
       40% {
-        left: -300px;
+        left: -320px;
         opacity: 1;
       }
       
       45% {
-        left: -300px;
+        left: -320px;
         opacity: 1;
       }
       
@@ -1708,12 +1728,12 @@ figure:hover img {
       
       60% {
         /* left: -1200px; */
-        left: -600px;
+        left: -640px;
         opacity: 1;
       }
       
       70% {
-        left: -600px;
+        left: -640px;
         opacity: 1;
       }
       
@@ -1722,7 +1742,7 @@ figure:hover img {
       }
       
       80% {
-        left: -900px;
+        left: -960px;
         opacity: 1;
       }
       
@@ -1731,7 +1751,7 @@ figure:hover img {
       }
       
       98% {
-        left: -900px;
+        left: -960px;
         opacity: 0;
       }
       
